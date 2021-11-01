@@ -30,5 +30,5 @@ PORT="14092"
 docker run -d --name postgresql-web \
 -e ALLOW_EMPTY_PASSWORD=yes \
 -e DATABASE_HOST=${ADDR} \
--p $PORT:80 bitnami/phppgadmin
+-p $PORT:8080 bitnami/phppgadmin
 ```
