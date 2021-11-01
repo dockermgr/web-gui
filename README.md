@@ -1,5 +1,4 @@
-# web-gui
-UI for servers
+# web-gui - UI for servers
 
 ## MongoDB
 
