@@ -17,7 +17,7 @@ docker run -d --name mongo-web \
 ```bash
 ADDR="$(docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' mariadb)"
 PORT="14091"
-docker run -d --name myadmin \
+docker run -d --name mariadb-web \
 -e PMA_HOST=${ADDR} \
 -p $PORT:80 phpmyadmin
 ```
@@ -27,7 +27,7 @@ docker run -d --name myadmin \
 ```bash
 ADDR="$(docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' postgresql)"
 PORT="14092"
-docker run -d --name myadmin \
+docker run -d --name postgresql-web \
 -e ALLOW_EMPTY_PASSWORD=yes \
 -e DATABASE_HOST=${ADDR} \
 -p $PORT:80 bitnami/phppgadmin
